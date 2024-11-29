@@ -30,19 +30,18 @@
         {
             btnAggiungi = new Button();
             btnRimuovi = new Button();
-            menuStrip1 = new MenuStrip();
-            toolStripMenuItem1 = new ToolStripMenuItem();
-            prodottiToolStripMenuItem = new ToolStripMenuItem();
             label1 = new Label();
             numProdotti = new Label();
-            menuStrip1.SuspendLayout();
+            listBox1 = new ListBox();
+            comboBox1 = new ComboBox();
+            label2 = new Label();
             SuspendLayout();
             // 
             // btnAggiungi
             // 
             btnAggiungi.BackColor = Color.Lime;
             btnAggiungi.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAggiungi.Location = new Point(469, 240);
+            btnAggiungi.Location = new Point(659, 230);
             btnAggiungi.Name = "btnAggiungi";
             btnAggiungi.Size = new Size(129, 63);
             btnAggiungi.TabIndex = 0;
@@ -54,7 +53,7 @@
             // 
             btnRimuovi.BackColor = Color.Red;
             btnRimuovi.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            btnRimuovi.Location = new Point(187, 240);
+            btnRimuovi.Location = new Point(188, 230);
             btnRimuovi.Name = "btnRimuovi";
             btnRimuovi.Size = new Size(129, 63);
             btnRimuovi.TabIndex = 1;
@@ -62,31 +61,11 @@
             btnRimuovi.UseVisualStyleBackColor = false;
             btnRimuovi.Click += btnRimuovi_Click;
             // 
-            // menuStrip1
-            // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { toolStripMenuItem1, prodottiToolStripMenuItem });
-            menuStrip1.Location = new Point(0, 0);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 24);
-            menuStrip1.TabIndex = 2;
-            menuStrip1.Text = "menuStrip1";
-            // 
-            // toolStripMenuItem1
-            // 
-            toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new Size(12, 20);
-            // 
-            // prodottiToolStripMenuItem
-            // 
-            prodottiToolStripMenuItem.Name = "prodottiToolStripMenuItem";
-            prodottiToolStripMenuItem.Size = new Size(62, 20);
-            prodottiToolStripMenuItem.Text = "Prodotti";
-            // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(218, 174);
+            label1.Location = new Point(200, 44);
             label1.Name = "label1";
             label1.Size = new Size(336, 25);
             label1.TabIndex = 3;
@@ -96,28 +75,55 @@
             // 
             numProdotti.AutoSize = true;
             numProdotti.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            numProdotti.Location = new Point(560, 170);
+            numProdotti.Location = new Point(542, 40);
             numProdotti.Name = "numProdotti";
             numProdotti.Size = new Size(72, 30);
             numProdotti.TabIndex = 4;
             numProdotti.Text = "label2";
+            // 
+            // listBox1
+            // 
+            listBox1.FormattingEnabled = true;
+            listBox1.ItemHeight = 15;
+            listBox1.Location = new Point(12, 54);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(160, 349);
+            listBox1.TabIndex = 5;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "TV - 00001", "TV - 10001", "TV - 10101", "FelpaNike - 20303", "FelpaAdidas -35039", "FelpaGucci - 90231", "FelpaNorthFace - 32032" });
+            comboBox1.Location = new Point(439, 146);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(121, 23);
+            comboBox1.TabIndex = 6;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(455, 122);
+            label2.Name = "label2";
+            label2.Size = new Size(94, 21);
+            label2.TabIndex = 7;
+            label2.Text = "PRODOTTO";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label2);
+            Controls.Add(comboBox1);
+            Controls.Add(listBox1);
             Controls.Add(numProdotti);
             Controls.Add(label1);
             Controls.Add(btnRimuovi);
             Controls.Add(btnAggiungi);
-            Controls.Add(menuStrip1);
-            MainMenuStrip = menuStrip1;
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
-            menuStrip1.ResumeLayout(false);
-            menuStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -126,10 +132,10 @@
 
         private Button btnAggiungi;
         private Button btnRimuovi;
-        private MenuStrip menuStrip1;
-        private ToolStripMenuItem toolStripMenuItem1;
-        private ToolStripMenuItem prodottiToolStripMenuItem;
         private Label label1;
         private Label numProdotti;
+        private ListBox listBox1;
+        private ComboBox comboBox1;
+        private Label label2;
     }
 }
