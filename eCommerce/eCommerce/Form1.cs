@@ -1,15 +1,20 @@
 using System.Text.Json;
+using System.Media;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace eCommerce
 {
     public partial class Form1 : Form
     {
+        private SoundPlayer audioCassa;
         Carrello carrello;
         Prodotto prodotto;
         public Form1()
         {
             InitializeComponent();
             carrello = new Carrello("000001");
+            audioCassa = new SoundPlayer(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "audio", "audio_cassa.wav"));
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -24,6 +29,7 @@ namespace eCommerce
                 return;
             carrello.aggiungiProdotto(prodotto);
             AggiornaGrafica("add");
+            audioCassa.Play();
         }
 
         private void btnRimuovi_Click(object sender, EventArgs e)
@@ -66,6 +72,7 @@ namespace eCommerce
                     carrello.CostoTotale += prodotto.Prezzo; 
                 }
                 AggiornaGrafica("carica");
+                audioCassa.Play();
                 MessageBox.Show("Carrello caricato con successo!");
             }
             else

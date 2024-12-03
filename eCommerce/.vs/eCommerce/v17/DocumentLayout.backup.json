@@ -38,8 +38,7 @@
               "RelativeToolTip": "eCommerce\\Carrello.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T20:29:00.433Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-29T20:29:00.433Z"
             },
             {
               "$type": "Document",
@@ -51,8 +50,7 @@
               "RelativeToolTip": "eCommerce\\Prodotto.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAB0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T19:59:29.268Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-29T19:59:29.268Z"
             },
             {
               "$type": "Document",
@@ -62,7 +60,7 @@
               "RelativeDocumentMoniker": "eCommerce\\Form1.cs",
               "ToolTip": "C:\\Users\\admin\\Desktop\\eCommerce\\eCommerce\\eCommerce\\Form1.cs*",
               "RelativeToolTip": "eCommerce\\Form1.cs*",
-              "ViewState": "AgIAADIAAAAAAAAAAAAtwD0AAACHAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAIwEoAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-29T19:59:29.296Z",
               "EditorCaption": ""
@@ -73,11 +71,10 @@
               "Title": "Form1.cs [Progettazione]",
               "DocumentMoniker": "C:\\Users\\admin\\Desktop\\eCommerce\\eCommerce\\eCommerce\\Form1.cs",
               "RelativeDocumentMoniker": "eCommerce\\Form1.cs",
-              "ToolTip": "C:\\Users\\admin\\Desktop\\eCommerce\\eCommerce\\eCommerce\\Form1.cs [Progettazione]*",
-              "RelativeToolTip": "eCommerce\\Form1.cs [Progettazione]*",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\eCommerce\\eCommerce\\eCommerce\\Form1.cs [Progettazione]",
+              "RelativeToolTip": "eCommerce\\Form1.cs [Progettazione]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T19:59:32.501Z",
-              "EditorCaption": " [Progettazione]"
+              "WhenOpened": "2024-11-29T19:59:32.501Z"
             }
           ]
         }
