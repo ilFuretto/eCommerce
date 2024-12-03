@@ -35,6 +35,11 @@
             listBox1 = new ListBox();
             comboBox1 = new ComboBox();
             label2 = new Label();
+            btnSvuota = new Button();
+            label3 = new Label();
+            costoTotale = new Label();
+            btnSalva = new Button();
+            btnCarica = new Button();
             SuspendLayout();
             // 
             // btnAggiungi
@@ -94,7 +99,7 @@
             // 
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Panasonic - TV_S65A - 299 - 00001", "Sony - TV_Bravia - 479 - 10001", "Samsung - TV_M7 - 379 - 10101", "Nike - felpa - 70 - 20303", "Adidas - felpa - 60 - 35039", "Gucci - felpa - 220 - 90231", "NorthFace - felpa - 55 - 32032" });
-            comboBox1.Location = new Point(392, 146);
+            comboBox1.Location = new Point(394, 149);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(206, 23);
             comboBox1.TabIndex = 6;
@@ -104,17 +109,78 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(455, 122);
+            label2.Location = new Point(452, 125);
             label2.Name = "label2";
             label2.Size = new Size(94, 21);
             label2.TabIndex = 7;
             label2.Text = "PRODOTTO";
+            // 
+            // btnSvuota
+            // 
+            btnSvuota.BackColor = Color.Yellow;
+            btnSvuota.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSvuota.Location = new Point(430, 230);
+            btnSvuota.Name = "btnSvuota";
+            btnSvuota.Size = new Size(129, 63);
+            btnSvuota.TabIndex = 8;
+            btnSvuota.Text = "SVUOTA CARRELLO";
+            btnSvuota.UseVisualStyleBackColor = false;
+            btnSvuota.Click += btnSvuota_Click;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(2, 416);
+            label3.Name = "label3";
+            label3.Size = new Size(149, 25);
+            label3.TabIndex = 9;
+            label3.Text = "COSTO TOTALE:";
+            // 
+            // costoTotale
+            // 
+            costoTotale.AutoSize = true;
+            costoTotale.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            costoTotale.Location = new Point(157, 411);
+            costoTotale.Name = "costoTotale";
+            costoTotale.Size = new Size(72, 30);
+            costoTotale.TabIndex = 10;
+            costoTotale.Text = "label2";
+            // 
+            // btnSalva
+            // 
+            btnSalva.BackColor = Color.FromArgb(0, 192, 192);
+            btnSalva.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSalva.Location = new Point(278, 383);
+            btnSalva.Name = "btnSalva";
+            btnSalva.Size = new Size(183, 36);
+            btnSalva.TabIndex = 11;
+            btnSalva.Text = "SALVA CARRELLO";
+            btnSalva.UseVisualStyleBackColor = false;
+            btnSalva.Click += btnSalva_Click;
+            // 
+            // btnCarica
+            // 
+            btnCarica.BackColor = Color.FromArgb(0, 192, 192);
+            btnCarica.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCarica.Location = new Point(524, 383);
+            btnCarica.Name = "btnCarica";
+            btnCarica.Size = new Size(183, 36);
+            btnCarica.TabIndex = 12;
+            btnCarica.Text = "CARICA CARRELLO";
+            btnCarica.UseVisualStyleBackColor = false;
+            btnCarica.Click += btnCarica_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnCarica);
+            Controls.Add(btnSalva);
+            Controls.Add(costoTotale);
+            Controls.Add(label3);
+            Controls.Add(btnSvuota);
             Controls.Add(label2);
             Controls.Add(comboBox1);
             Controls.Add(listBox1);
@@ -138,5 +204,10 @@
         private ListBox listBox1;
         private ComboBox comboBox1;
         private Label label2;
+        private Button btnSvuota;
+        private Label label3;
+        private Label costoTotale;
+        private Button btnSalva;
+        private Button btnCarica;
     }
 }
