@@ -8,13 +8,16 @@ namespace eCommerce
     public partial class Form1 : Form
     {
         private SoundPlayer audioCassa;
-        Carrello carrello;
-        Prodotto prodotto;
+        private Carrello carrello;
+        private Prodotto prodotto;
+        private int idInt;
+        private string id;
         public Form1()
         {
             InitializeComponent();
             carrello = new Carrello("000001");
             audioCassa = new SoundPlayer(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "audio", "audio_cassa.wav"));
+            idInt = 1;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -27,9 +30,13 @@ namespace eCommerce
         {
             if (comboBox1.SelectedItem == null)
                 return;
+            
+            id = idInt.ToString("D6");
+            MessageBox.Show(id);
             carrello.aggiungiProdotto(prodotto);
             AggiornaGrafica("add");
             audioCassa.Play();
+            idInt++;
         }
 
         private void btnRimuovi_Click(object sender, EventArgs e)
@@ -67,9 +74,9 @@ namespace eCommerce
                 string jsonString = File.ReadAllText(filePath); //leggo il contenuto del file e lo memorizzo in una stringa
                 List<Prodotto> prodotti = JsonSerializer.Deserialize<List<Prodotto>>(jsonString);//prendo la stringa JSON e la converto di nuovo in una lista di oggetti Prodotto
                 carrello.ProdottiCarrello = prodotti;
-                foreach (Prodotto prodotto in carrello.ProdottiCarrello) 
-                { 
-                    carrello.CostoTotale += prodotto.Prezzo; 
+                foreach (Prodotto prodotto in carrello.ProdottiCarrello)
+                {
+                    carrello.CostoTotale += prodotto.Prezzo;
                 }
                 AggiornaGrafica("carica");
                 audioCassa.Play();
@@ -91,7 +98,6 @@ namespace eCommerce
             string marca = parti[0].Trim(); //ho usato trim per rimuovere eventuali spazi bianchi prima e dopo
             string modello = parti[1].Trim();
             double prezzo = Convert.ToInt16(parti[2].Trim());
-            string id = parti[3].Trim();
 
             prodotto = new Prodotto(marca, modello, id, prezzo);
             //MessageBox.Show(prodotto.Marca + " - " + prodotto.Modello + " - " + prodotto.Identificativo + " - " + prodotto.Prezzo);

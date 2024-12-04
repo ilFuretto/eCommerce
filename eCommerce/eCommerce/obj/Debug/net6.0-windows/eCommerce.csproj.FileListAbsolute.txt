@@ -32,3 +32,4 @@ C:\Users\admin\Desktop\eCommerce\eCommerce\eCommerce\obj\Debug\net6.0-windows\eC
 C:\Users\admin\Desktop\eCommerce\eCommerce\eCommerce\obj\Debug\net6.0-windows\eCommerce.genruntimeconfig.cache
 C:\Users\admin\Desktop\eCommerce\eCommerce\eCommerce\obj\Debug\net6.0-windows\ref\eCommerce.dll
 C:\Users\admin\Desktop\eCommerce\eCommerce\eCommerce\bin\Debug\net6.0-windows\audio\audio_cassa.wav
+C:\Users\colombo.21191\Desktop\eCommerce\eCommerce\eCommerce\bin\Debug\net6.0-windows\audio\audio_cassa.wav

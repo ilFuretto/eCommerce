@@ -98,7 +98,7 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Panasonic - TV_S65A - 299 - 00001", "Sony - TV_Bravia - 479 - 10001", "Samsung - TV_M7 - 379 - 10101", "Nike - felpa - 70 - 20303", "Adidas - felpa - 60 - 35039", "Gucci - felpa - 220 - 90231", "NorthFace - felpa - 55 - 32032" });
+            comboBox1.Items.AddRange(new object[] { "Panasonic - TV_S65A - 299", "Sony - TV_Bravia - 479", "Samsung - TV_M7 - 379", "Nike - felpa - 70", "Adidas - felpa - 60", "Gucci - felpa - 220", "NorthFace - felpa - 55" });
             comboBox1.Location = new Point(394, 149);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(206, 23);
