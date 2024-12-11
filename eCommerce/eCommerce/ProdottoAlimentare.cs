@@ -6,22 +6,22 @@ using System.Threading.Tasks;
 
 namespace eCommerce
 {
-    class ProdottoElettronico : Prodotto 
+    class ProdottoAlimentare : Prodotto
     {
         private double sconto;
         public double Sconto
         {
             get { return sconto; }
         }
-        public ProdottoElettronico(string marca, string modello, string identificativo, double prezzo) : base(marca, modello, identificativo, prezzo)
+        public ProdottoAlimentare(string marca, string modello, string identificativo, double prezzo) : base(marca, modello, identificativo, prezzo)
         {
-            sconto = 0.9;
+            sconto = 0.8;
             PrezzoEffettivo = CalcolaPrezzoEffettivo();
         }
 
         override public double CalcolaPrezzoEffettivo()
         {
-            return Prezzo*sconto;
+            return Prezzo * sconto;
         }
     }
 }

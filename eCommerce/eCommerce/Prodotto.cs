@@ -12,6 +12,13 @@ namespace eCommerce
         private string modello;
         private double prezzo;
         private string identificativo;
+        private double prezzoEffettivo;
+
+        public double PrezzoEffettivo
+        {
+            get { return prezzoEffettivo;}
+            set { prezzoEffettivo = value;}
+        }
 
         public string Marca
         {
@@ -37,6 +44,12 @@ namespace eCommerce
             this.modello = modello;
             this.identificativo = identificativo;
             this.prezzo = prezzo;
+            prezzoEffettivo = CalcolaPrezzoEffettivo();
+        }
+
+        virtual public double CalcolaPrezzoEffettivo()
+        {
+            return prezzo;
         }
         public bool Equals(Prodotto other)
         {

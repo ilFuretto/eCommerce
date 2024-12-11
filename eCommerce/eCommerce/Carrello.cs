@@ -28,6 +28,12 @@ namespace eCommerce
             get { return costoTotale; }
             set { costoTotale = value; }
         }
+        private double costoScontato;
+        public double CostoScontato
+        {
+            get { return costoScontato; }
+            set { costoScontato = value; }
+        }
 
         public void aggiungiProdotto(Prodotto prodotto)
         {
@@ -35,6 +41,8 @@ namespace eCommerce
                 return;
             prodottiCarrello.Add(prodotto);
             CostoTotale += prodotto.Prezzo;
+            CostoScontato += prodotto.PrezzoEffettivo;
+
         }
         public void rimuoviProdotto(Prodotto prodotto)
         {
@@ -42,6 +50,7 @@ namespace eCommerce
                 return;
             prodottiCarrello.Remove(prodotto);
             CostoTotale -= prodotto.Prezzo;
+            CostoScontato -= prodotto.PrezzoEffettivo;
         }
         public void rimuoviProdottoVistaInClasse(int indice)
         {
@@ -54,6 +63,7 @@ namespace eCommerce
         {
             prodottiCarrello.Clear();
             CostoTotale = 0.0;
+            costoScontato = 0.0;
         }
 
         public Carrello(string identificativo)
@@ -61,6 +71,7 @@ namespace eCommerce
             this.identificativo = identificativo;
             prodottiCarrello = new List<Prodotto>();
             costoTotale = 0.0;
+            costoScontato = 0.0;
         }
     }
 }
