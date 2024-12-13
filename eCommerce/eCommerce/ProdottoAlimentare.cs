@@ -23,5 +23,14 @@ namespace eCommerce
         {
             return Prezzo * sconto;
         }
+        public override bool Equals(object obj)
+        {
+            if (obj == null || this.GetType() != obj.GetType())
+                return false;
+
+            Prodotto other = (Prodotto)obj;
+            return Identificativo == other.Identificativo;
+        }
+
     }
 }

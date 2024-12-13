@@ -51,7 +51,7 @@ namespace eCommerce
         {
             return prezzo;
         }
-        public bool Equals(Prodotto other)
+        virtual public bool Equals(Prodotto other)
         {
             if (other == null)
                 return false;
