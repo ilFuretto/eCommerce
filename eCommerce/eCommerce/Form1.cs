@@ -55,7 +55,7 @@ namespace eCommerce
 
         private void btnAggiungi_Click(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedItem == null)
+            if (comboBox1.SelectedItem == null && prodottiAlimentari.SelectedItem == null && prodottiElettronici == null)
                 return;
             foreach (Prodotto prod in carrello.ProdottiCarrello)
             {
@@ -110,9 +110,12 @@ namespace eCommerce
                 List<Prodotto> prodotti = JsonSerializer.Deserialize<List<Prodotto>>(jsonString);//prendo la stringa JSON e la converto di nuovo in una lista di oggetti Prodotto
                 carrello.ProdottiCarrello = prodotti;
                 idInt = carrello.ProdottiCarrello.Count + 1;
+                carrello.CostoTotale = 0.0;
+                carrello.CostoScontato = 0.0;
                 foreach (Prodotto prodotto in carrello.ProdottiCarrello)
                 {
-                    carrello.CostoTotale += prodotto.Prezzo;
+                    //MessageBox.Show(prodotto.Identificativo.ToString());
+                    carrello.CostoTotale += prodotto.Prezzo; 
                     carrello.CostoScontato += prodotto.PrezzoEffettivo;
                 }
                 AggiornaGrafica("carica");
@@ -135,7 +138,7 @@ namespace eCommerce
 
             string marca = parti[0].Trim(); //ho usato trim per rimuovere eventuali spazi bianchi prima e dopo
             string modello = parti[1].Trim();
-            double prezzo = Convert.ToInt16(parti[2].Trim());
+            double prezzo = Convert.ToDouble(parti[2].Trim());
 
             prodotto = new Prodotto(marca, modello, id, prezzo);
             //MessageBox.Show(prodotto.Marca + " - " + prodotto.Modello + " - " + prodotto.Identificativo + " - " + prodotto.Prezzo);
@@ -182,7 +185,7 @@ namespace eCommerce
             AggiornaCostoTotale();
             if (operazione == "add")
             {
-                listBox1.Items.Add(prodotto.Marca + "  " + prodotto.Modello + " - €" + prodotto.Prezzo);
+                listBox1.Items.Add(prodotto.Modello + "  " + prodotto.Marca + " - €" + prodotto.Prezzo);
             }
             else if (operazione == "remove")
             {
@@ -197,7 +200,7 @@ namespace eCommerce
                 listBox1.Items.Clear();
                 foreach (var prodotto in carrello.ProdottiCarrello)
                 {
-                    listBox1.Items.Add(prodotto.Marca + "  " + prodotto.Modello + " - €" + prodotto.Prezzo);
+                    listBox1.Items.Add(prodotto.Modello + "  " + prodotto.Marca + " - €" + prodotto.Prezzo);
                 }
             }
             else
